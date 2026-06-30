@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexPlay — Gaming Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+
+  <div class="cookies-bar" id="cookiesBar">
+    <p>ჩვენ ვიყენებთ Cookies უკეთესი გამოცდილებისთვის.</p>
+    <button id="cookiesAccept">Accept</button>
+  </div>
+
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#" class="logo">NEX<span>PLAY</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#games">Games</a>
+        <a href="#players">Players</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Welcome to the next level</p>
+      <h1 class="hero-title">GAMING<br><span>UNIVERSE</span></h1>
+      <p class="hero-desc">შემოგვიერთდი და იყავი საუკეთესო მოთამაშე სამყაროში</p>
+      <a href="#games" class="btn-primary">Explore Games</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">// ABOUT US</div>
+      <h2 class="section-title">რატომ <span>NexPlay?</span></h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="card-icon">🎮</div>
+          <h3>500+ თამაში</h3>
+          <p>უდიდესი კოლექცია ყველა ჟანრში</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">⚡</div>
+          <h3>Ultra-Low Ping</h3>
+          <p>სერვერები მსოფლიოს 30+ ქვეყანაში</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🏆</div>
+          <h3>ტურნირები</h3>
+          <p>ყოველკვირეული ტურნირები $10,000 პრიზით</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🛡️</div>
+          <h3>უსაფრთხოება</h3>
+          <p>Anti-cheat სისტემა 24/7 დაცვით</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="games" id="games">
+    <div class="container">
+      <div class="section-label">// POPULAR GAMES</div>
+      <h2 class="section-title">პოპულარული <span>თამაშები</span></h2>
+      <div class="games-grid">
+        <div class="game-card">
+          <div class="game-img game-img-1"></div>
+          <div class="game-info">
+            <span class="game-genre">MOBA</span>
+            <h3>League of Legends</h3>
+            <p>150M+ მოთამაშე</p>
+            <a href="#" class="btn-sm">Play Now</a>
+          </div>
+        </div>
+        <div class="game-card featured">
+          <div class="game-badge">HOT</div>
+          <div class="game-img game-img-2"></div>
+          <div class="game-info">
+            <span class="game-genre">BATTLE ROYALE</span>
+            <h3>Valorant</h3>
+            <p>80M+ მოთამაშე</p>
+            <a href="#" class="btn-sm">Play Now</a>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="game-img game-img-3"></div>
+          <div class="game-info">
+            <span class="game-genre">FPS</span>
+            <h3>CS2</h3>
+            <p>35M+ მოთამაშე</p>
+            <a href="#" class="btn-sm">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="players" id="players">
+    <div class="container">
+      <div class="section-label">// TOP PLAYERS</div>
+      <h2 class="section-title">საუკეთესო <span>მოთამაშეები</span></h2>
+      <div class="players-grid" id="playersGrid">
+        <div class="loader">Loading players...</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">// JOIN US</div>
+      <h2 class="section-title">რეგისტრაცია</h2>
+      <form class="contact-form" id="regForm" novalidate>
+        <div class="form-group">
+          <label>სახელი</label>
+          <input type="text" id="fname" placeholder="შეიყვანე სახელი" />
+          <span class="error-msg" id="fnameError"></span>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="example@gmail.com" />
+          <span class="error-msg" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label>პაროლი</label>
+          <div class="pass-wrap">
+            <input type="password" id="password" placeholder="მინ. 8 სიმბოლო" />
+            <button type="button" class="toggle-pass" id="togglePass">👁</button>
+          </div>
+          <span class="error-msg" id="passwordError"></span>
+        </div>
+        <div class="form-group">
+          <label>გაიმეორე პაროლი</label>
+          <div class="pass-wrap">
+            <input type="password" id="confirmPass" placeholder="გაიმეორე პაროლი" />
+            <button type="button" class="toggle-pass" id="toggleConfirm">👁</button>
+          </div>
+          <span class="error-msg" id="confirmError"></span>
+        </div>
+        <button type="submit" class="btn-primary full">რეგისტრაცია</button>
+        <div class="success-msg" id="successMsg"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="logo">NEX<span>PLAY</span></a>
+        <p>2025 NexPlay. ყველა უფლება დაცულია.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop">&#8593;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
